@@ -23,14 +23,14 @@ def index(request):
     print("Task1 ID:", result.id)
     return render(request, "myapp/home.html" , {"result":result})
 
-def check_result ( request , task_id):
-    result = AsyncResult( task_id)
-    print ( 'ready :' , result.ready())
-    print ('sucessful :' , result.sucessful())
-    print( 'faild :' , result.faild())
-    print( 'get :' , result.get())
+def check_result(request, task_id):
+    result = AsyncResult(task_id)
+    print('ready:', result.ready())
+    print('successful:', result.successful())
+    print('failed:', result.failed())  
+    print('get:', result.get())
     
-    return  render ( request , 'myapp/check_result.html' , {"result":result})
+    return render(request, 'myapp/check_result.html', {"result": result})
 
 
 def contact( request):  
