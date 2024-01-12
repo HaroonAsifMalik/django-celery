@@ -18,5 +18,5 @@ app.autodiscover_tasks()
 
 @app.task
 def add(x, y):
-    print("I am a task")
+    sleep(10) #for make it time consiming
     return x + y
