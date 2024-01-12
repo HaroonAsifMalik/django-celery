@@ -15,12 +15,15 @@
     <a href="{% url  'contact' %}"> contact</a>
         
     {% if result.id %}
-     <h5>result  id :{{result.id}}</h5>
-     <h5>Task id :{{result.task_id}}</h5> 
-     <h5>state id :{{result.state}}</h5> 
-     <h5>status  id :{{result.status}}</h5> 
-     <h5>result value :{{result.result}}</h5>
+    <h5>Result ID: {{ result.id }}</h5>
+    <h5>Task ID: {{ result.task_id }}</h5>
+    <h5>State: {{ result.state }}</h5>
+    <h5>Status: {{ result.status }}</h5>
+    {% if result.ready %}
+        <h5>Result Value: {{ result.result }}</h5>
     {% endif %}
+    {% endif %}
+
 <p >
 </body>
 </html> 

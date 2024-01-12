@@ -16,8 +16,7 @@
         
     {% if result.id %}
     <p> Task id : {{result.id}}</p>
-    <a> href="{% url "check_result" result.id  %}"</a>
-        Result 
+    <a href="{% url 'check_result' result.id  %}">  Result</a>
     {% endif %}
 
 </body>
