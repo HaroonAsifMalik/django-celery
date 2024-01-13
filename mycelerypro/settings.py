@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # ----------
     'django_celery_results',
+    'django_celery_beat',
     'myapp',
 ]
 
@@ -142,3 +143,6 @@ CELERY_RESULT_EXTENDED=True
 #      # add other tasks ...
              
 # }
+
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+    

@@ -12,3 +12,9 @@ def sub ( x , y):
 def clear_session_cache(id):
     print ( 'the seccion is clear')
     return id
+
+@shared_task
+def clear_redis_data(key):
+    print ( 'the seccion is clear')
+    return key
+

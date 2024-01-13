@@ -1,8 +1,8 @@
 import os
 from time import sleep
 from celery import Celery
-from celery import timedelta 
-from celery.schedule import crontab
+from celery.schedules import timedelta
+from celery.schedules import crontab
 
 # Set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mycelerypro.settings')
@@ -15,7 +15,7 @@ app = Celery('mycelerypro')
 #   should have a `CELERY_` prefix.
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
-# Load task modules from all registered Django apps.
+# Load task modules from all registered Django apps.    
 app.autodiscover_tasks()
 
 @app.task(name="addition_task")
