@@ -7,7 +7,7 @@ def sub ( x , y):
     sleep (15)
     return x-y
 
-# the priodic schedule methord 1
+# priodic function task
 @shared_task
 def clear_session_cache(id):
     print ( 'the seccion is clear')

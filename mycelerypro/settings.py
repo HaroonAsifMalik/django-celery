@@ -132,13 +132,13 @@ CELERY_RESULT_BACKEND = 'django-db'
 CELERY_TIMEZONE = 'Asia/Karachi' 
 CELERY_RESULT_EXTENDED=True
 
-# the priodic schedule methord 1
-CELERY_BEAT_SCHEDULE = {
-    'every_10_second':{
-        'task':'myapp.tasks.clear_session_cache',
-        'schedule':10,
-        'args':(1111,)
-    }
-     # add other tasks ...
+## the priodic schedule methord 1
+# CELERY_BEAT_SCHEDULE = {
+#     'every_10_second':{
+#         'task':'myapp.tasks.clear_session_cache',
+#         'schedule':10,
+#         'args':(1111,)
+#     }
+#      # add other tasks ...
              
-}
+# }

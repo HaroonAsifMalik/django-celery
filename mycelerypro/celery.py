@@ -20,3 +20,14 @@ app.autodiscover_tasks()
 def add(x, y):
     sleep(10) #for make it time consiming
     return x + y
+
+#preodic function methord 2
+app.conf.beat_schedule = {
+    'every_10_second':{
+        'task':'myapp.tasks.clear_session_cache',
+        'schedule':10,
+        'args':(1111,)
+    }
+     # add other tasks ...
+             
+}
